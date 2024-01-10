@@ -1,4 +1,5 @@
 import { useState } from "react"
+
   const Home = ()=>{
     const [name,setName] = useState('Aman');
     const [age,setAge] = useState('25');
@@ -16,7 +17,9 @@ import { useState } from "react"
     }
     return(
         <div className="home">
+            
             <h2> This is the home page !! </h2><br/>
+           
             <p> Name : {name} </p><br/> Age : {age}<br/><br/>
             <button onClick={handleClick}> First Button</button>
             <button onClick={(e)=>handleClickAgain(' Hazza',e)}> Change Name</button>
