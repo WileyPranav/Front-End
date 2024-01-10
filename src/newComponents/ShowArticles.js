@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PrintData from "./PrintData";
 
 const ShowArticles =()=>{
 const [articles,setArticles] = useState([
@@ -8,13 +9,13 @@ const [articles,setArticles] = useState([
     {title:'Car rental', desc:'This is an application for renting out cars',leader:'Halima',id:4}
          ]);
 
-
+         const handleDelete=(id)=>{
+            const newarticles = articles.filter(a => a.id!==id);
+            setArticles(newarticles);
+        }
     return(<div>
-        <table border={'2px'}>
-            <tr><td>Title</td><td>Description</td><td>Leader</td></tr>
-            {articles.map(a=>(<tr key={a.id}><td>{a.title}</td><td>{a.desc}</td><td>{a.leader}</td></tr>))}
-        </table>
-    </div>);
-}
+        <PrintData articles={articles} title = {"List of Articles"} handleDelete={handleDelete}/>
+         </div>);
+        }
 
 export default ShowArticles;

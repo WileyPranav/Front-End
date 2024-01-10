@@ -12,6 +12,7 @@ const Navbar =()=>{
             }}>About us</Link>
             <Link to="/CreateArticle">Create Article</Link>
             <Link to="/Articles"> Articles</Link>
+            <Link to="/Reports"> Reports</Link>
         </div>
     </nav>);
 }

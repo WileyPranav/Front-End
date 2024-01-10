@@ -4,6 +4,7 @@ import Navbar from "./newComponents/Navbar";
 import ShowArticles from "./newComponents/ShowArticles";
 import { BrowserRouter as Router,Route,Routes as Switch } from "react-router-dom";
 import CreateArticle from './newComponents/CreateArticle'
+import ShowReports from "./newComponents/ShowReports";
 function App() {
   return (<Router>
           <div className="App">
@@ -13,6 +14,7 @@ function App() {
               <Route exact path='/' element={<Home/>}/>
               <Route path='/Articles'element={<ShowArticles/>}/>
               <Route path='/CreateArticle' element={<CreateArticle/>}/>
+              <Route path='/Reports' element={<ShowReports/>}/>
             </Switch>
             </div>
         </div>
