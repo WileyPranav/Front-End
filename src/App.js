@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Route,Routes as Switch } from "react-router-dom
 import CreateArticle from './newComponents/CreateArticle'
 import ShowReports from "./newComponents/ShowReports";
 import PrintProduct from "./DBuse/PrintProduct";
+import DBTest from "./newComponents/DBtest";
 function App() {
   return (<Router>
           <div className="App">
@@ -17,6 +18,7 @@ function App() {
               <Route path='/CreateArticle' element={<CreateArticle/>}/>
               <Route path='/Reports' element={<ShowReports/>}/>
               <Route path='/Products' element={<PrintProduct/>}/>
+              <Route path='/getData' element={<DBTest/>}/>
             </Switch>
             </div>
         </div>
